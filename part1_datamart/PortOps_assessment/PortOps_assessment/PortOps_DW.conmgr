@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="PortOps_DW"
+  DTS:DTSID="{CA777945-62A9-4145-9F78-0B8DEAD96D45}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=KHALED\SQLSERVERDEV;Initial Catalog=PortOps_DW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-PortOps_assessment-{CA777945-62A9-4145-9F78-0B8DEAD96D45}KHALED\SQLSERVERDEV.PortOps_DW;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

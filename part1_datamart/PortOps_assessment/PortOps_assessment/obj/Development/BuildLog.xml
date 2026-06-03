@@ -8,17 +8,17 @@
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>01_Load_Bronze_From_Excel.dtsx</Name>
-      <LastWriteTime>2026-06-02T12:42:40.0892198Z</LastWriteTime>
+      <LastWriteTime>2026-06-02T12:44:35.0604429Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>02_Load_Silver_Validated.dtsx</Name>
-      <LastWriteTime>2026-06-02T07:11:45.6842726Z</LastWriteTime>
+      <LastWriteTime>2026-06-03T14:54:38.7235525Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>00_Master.dtsx</Name>
-      <LastWriteTime>2026-06-02T12:43:47.3309633Z</LastWriteTime>
+      <LastWriteTime>2026-06-03T14:58:23.1142294Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -38,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>06_Load_Facts.dtsx</Name>
-      <LastWriteTime>2026-06-02T12:23:11.0227432Z</LastWriteTime>
+      <LastWriteTime>2026-06-03T15:50:49.9392144Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

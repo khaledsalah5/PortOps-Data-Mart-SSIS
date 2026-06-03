@@ -43,7 +43,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="LoadStartTime">
       <DTS:VariableValue
-        DTS:DataType="7">6/2/2026 3:43:00 PM</DTS:VariableValue>
+        DTS:DataType="7">6/3/2026 12:11:45 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""

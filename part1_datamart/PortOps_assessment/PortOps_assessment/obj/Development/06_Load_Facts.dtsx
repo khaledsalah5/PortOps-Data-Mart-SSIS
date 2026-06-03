@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{8B4F6694-DC71-4696-AA9A-7C68D3CB5187}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{C6808E28-62A6-40EF-9934-65183E63C267}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -99,55 +99,6 @@
                   refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[customer_sk]"
-                      cachedDataType="i4"
-                      cachedName="customer_sk"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[customer_sk]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[terminal_sk]"
-                      cachedDataType="i4"
-                      cachedName="terminal_sk"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[terminal_sk]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[movement_id]"
-                      cachedDataType="i4"
-                      cachedName="movement_id"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[movement_id]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[move_date_key]"
-                      cachedDataType="i4"
-                      cachedName="move_date_key"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[move_date_key]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[equipment_sk]"
-                      cachedDataType="i4"
-                      cachedName="equipment_sk"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[equipment_sk]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[shift_sk]"
-                      cachedDataType="i4"
-                      cachedName="shift_sk"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[shift_sk]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[move_start_time]"
-                      cachedDataType="wstr"
-                      cachedLength="27"
-                      cachedName="move_start_time"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[move_start_time]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[move_end_time]"
-                      cachedDataType="wstr"
-                      cachedLength="27"
-                      cachedName="move_end_time"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[move_end_time]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_fact_container_movement\CSPLIT_Valid_ContainerMovement_Facts.Inputs[Conditional Split Input].Columns[crane_cycle_seconds]"
-                      cachedDataType="i4"
-                      cachedName="crane_cycle_seconds"
-                      lineageId="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[crane_cycle_seconds]" />
-                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -166,13 +117,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[move_date_key]} != -1 &amp;&amp; #{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[customer_sk]} != -1 &amp;&amp; #{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[terminal_sk]} != -1 &amp;&amp; #{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[equipment_sk]} != -1 &amp;&amp; #{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[shift_sk]} != -1 &amp;&amp; ![ISNULL](#{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[movement_id]}) &amp;&amp; ![ISNULL](#{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[move_start_time]}) &amp;&amp; ![ISNULL](#{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[move_end_time]}) &amp;&amp; #{Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved.Outputs[OLE DB Source Output].Columns[crane_cycle_seconds]} &gt;= 0</property>
+                      name="Expression">1 == 1</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">move_date_key != -1 &amp;&amp; customer_sk != -1 &amp;&amp; terminal_sk != -1 &amp;&amp; equipment_sk != -1 &amp;&amp; shift_sk != -1 &amp;&amp; !ISNULL(movement_id) &amp;&amp; !ISNULL(move_start_time) &amp;&amp; !ISNULL(move_end_time) &amp;&amp; crane_cycle_seconds &gt;= 0</property>
+                      name="FriendlyExpression">1 == 1</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -3032,17 +2983,37 @@ WHERE vc.is_valid = 1;</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\SQL_Start_Audit"
-          TopLeft="206.666658653154,25.333333574401" />
+          Size="252.8,41.6"
+          Id="Package\DFT_Load_fact_container_movement"
+          TopLeft="173.333323862818,305.933331205911" />
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\DFT_Load_fact_gate_transaction"
+          TopLeft="219.166657970184,384.800000361601" />
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\DFT_Load_fact_vessel_call"
+          TopLeft="156.666658106778,228.799998408953" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\SQL_Check_Fact_Quality"
+          TopLeft="187.499989755452,449.066664762232" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\SQL_End_Audit_Failed"
+          TopLeft="641.733300368654,190.266666027838" />
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\SQL_End_Audit_Success"
           TopLeft="499.166642671659,505.066665485435" />
         <NodeLayout
           Size="187.2,41.6"
-          Id="Package\SQL_End_Audit_Failed"
-          TopLeft="641.733300368654,190.266666027838" />
+          Id="Package\SQL_Log_Row_Counts"
+          TopLeft="155.833324818976,518.599997884631" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\SQL_Start_Audit"
+          TopLeft="206.666658653154,25.333333574401" />
         <NodeLayout
           Size="208.8,41.6"
           Id="Package\SQL_Truncate_Fact_Tables"
@@ -3069,10 +3040,6 @@ WHERE vc.is_valid = 1;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="206.4,41.6"
-          Id="Package\DFT_Load_fact_vessel_call"
-          TopLeft="156.666658106778,228.799998408953" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="263.383324614085,175.933332399196">
@@ -3095,10 +3062,114 @@ WHERE vc.is_valid = 1;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="252.8,41.6"
-          Id="Package\DFT_Load_fact_container_movement"
-          TopLeft="173.333323862818,305.933331205911" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="340.533323862818,305.933331205911">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="394.799976505836,-74.0666651780734"
+              Start="0,0"
+              End="394.799976505836,-66.5666651780734">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-25.906162920958" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-25.906162920958"
+                    Point2="0,-29.906162920958"
+                    Point3="4,-29.906162920958" />
+                  <mssgle:LineSegment
+                    End="390.799976505836,-29.906162920958" />
+                  <mssgle:CubicBezierSegment
+                    Point1="390.799976505836,-29.906162920958"
+                    Point2="394.799976505836,-29.906162920958"
+                    Point3="394.799976505836,-33.906162920958" />
+                  <mssgle:LineSegment
+                    End="394.799976505836,-66.5666651780734" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="182.158640596668,-24.906162920958,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="373.03332463685,384.800000361601">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="407.099975731804,-152.933334333764"
+              Start="0,0"
+              End="407.099975731804,-145.433334333764">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-82.4596298415225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-82.4596298415225"
+                    Point2="0,-86.4596298415225"
+                    Point3="4,-86.4596298415225" />
+                  <mssgle:LineSegment
+                    End="403.099975731804,-86.4596298415225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="403.099975731804,-86.4596298415225"
+                    Point2="407.099975731804,-86.4596298415225"
+                    Point3="407.099975731804,-90.4596298415225" />
+                  <mssgle:LineSegment
+                    End="407.099975731804,-145.433334333764" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="188.308640209652,-81.4596298415225,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="318.433323088785,449.066664762232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="372.099977279869,-217.199998734394"
+              Start="0,0"
+              End="372.099977279869,-209.699998734394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-118.948332712539" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-118.948332712539"
+                    Point2="0,-122.948332712539"
+                    Point3="4,-122.948332712539" />
+                  <mssgle:LineSegment
+                    End="368.099977279869,-122.948332712539" />
+                  <mssgle:CubicBezierSegment
+                    Point1="368.099977279869,-122.948332712539"
+                    Point2="372.099977279869,-122.948332712539"
+                    Point3="372.099977279869,-126.948332712539" />
+                  <mssgle:LineSegment
+                    End="372.099977279869,-209.699998734394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="170.808640983684,-117.948332712539,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="259.399990984798,270.399998408953">
@@ -3121,10 +3192,6 @@ WHERE vc.is_valid = 1;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="232.8,41.6"
-          Id="Package\DFT_Load_fact_gate_transaction"
-          TopLeft="219.166657970184,384.800000361601" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="298.916657583168,347.533331205911">
@@ -3147,10 +3214,6 @@ WHERE vc.is_valid = 1;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="198.4,41.6"
-          Id="Package\SQL_Check_Fact_Quality"
-          TopLeft="187.499989755452,449.066664762232" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="335.566657970184,426.400000361601">
@@ -3185,10 +3248,6 @@ WHERE vc.is_valid = 1;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\SQL_Log_Row_Counts"
-          TopLeft="155.833324818976,518.599997884631" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="286.699989755452,490.666664762232">
@@ -3365,266 +3424,9 @@ WHERE vc.is_valid = 1;</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="340.533323862818,305.933331205911">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="394.799976505836,-74.0666651780734"
-              Start="0,0"
-              End="394.799976505836,-66.5666651780734">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-25.906162920958" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-25.906162920958"
-                    Point2="0,-29.906162920958"
-                    Point3="4,-29.906162920958" />
-                  <mssgle:LineSegment
-                    End="390.799976505836,-29.906162920958" />
-                  <mssgle:CubicBezierSegment
-                    Point1="390.799976505836,-29.906162920958"
-                    Point2="394.799976505836,-29.906162920958"
-                    Point3="394.799976505836,-33.906162920958" />
-                  <mssgle:LineSegment
-                    End="394.799976505836,-66.5666651780734" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="182.158640596668,-24.906162920958,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="373.03332463685,384.800000361601">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="407.099975731804,-152.933334333764"
-              Start="0,0"
-              End="407.099975731804,-145.433334333764">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-82.4596298415225" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-82.4596298415225"
-                    Point2="0,-86.4596298415225"
-                    Point3="4,-86.4596298415225" />
-                  <mssgle:LineSegment
-                    End="403.099975731804,-86.4596298415225" />
-                  <mssgle:CubicBezierSegment
-                    Point1="403.099975731804,-86.4596298415225"
-                    Point2="407.099975731804,-86.4596298415225"
-                    Point3="407.099975731804,-90.4596298415225" />
-                  <mssgle:LineSegment
-                    End="407.099975731804,-145.433334333764" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="188.308640209652,-81.4596298415225,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="318.433323088785,449.066664762232">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="372.099977279869,-217.199998734394"
-              Start="0,0"
-              End="372.099977279869,-209.699998734394">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-118.948332712539" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-118.948332712539"
-                    Point2="0,-122.948332712539"
-                    Point3="4,-122.948332712539" />
-                  <mssgle:LineSegment
-                    End="368.099977279869,-122.948332712539" />
-                  <mssgle:CubicBezierSegment
-                    Point1="368.099977279869,-122.948332712539"
-                    Point2="372.099977279869,-122.948332712539"
-                    Point3="372.099977279869,-126.948332712539" />
-                  <mssgle:LineSegment
-                    End="372.099977279869,-209.699998734394" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="170.808640983684,-117.948332712539,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\DFT_Load_fact_vessel_call">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="240,41.6"
-          Id="Package\DFT_Load_fact_vessel_call\SRC_silver_VesselCalls_Resolved"
-          TopLeft="304.166650047733,58.0666662628783" />
-        <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\DFT_Load_fact_vessel_call\CSPLIT_Valid_VesselCall_Facts"
-          TopLeft="280.833317989277,163.799998860955" />
-        <EdgeLayout
-          Id="Package\DFT_Load_fact_vessel_call.Paths[OLE DB Source Output]"
-          TopLeft="424.166650047733,99.6666662628783">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-28.5333320584562,64.1333325980769"
-              Start="0,0"
-              End="-28.5333320584562,56.6333325980769">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.0666662990385" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.0666662990385"
-                    Point2="0,32.0666662990385"
-                    Point3="-4,32.0666662990385" />
-                  <mssgle:LineSegment
-                    End="-24.5333320584562,32.0666662990385" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.5333320584562,32.0666662990385"
-                    Point2="-28.5333320584562,32.0666662990385"
-                    Point3="-28.5333320584562,36.0666662990385" />
-                  <mssgle:LineSegment
-                    End="-28.5333320584562,56.6333325980769" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\DFT_Load_fact_vessel_call\RC_VesselCallRows"
-          TopLeft="165.8333242726,287.733331332472" />
-        <EdgeLayout
-          Id="Package\DFT_Load_fact_vessel_call.Paths[Valid_VesselCall_Rows]"
-          TopLeft="395.633317989277,205.399998860955">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-142.599993716677,82.3333324715164"
-              Start="0,0"
-              End="-142.599993716677,74.8333324715164">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.1666662357582" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.1666662357582"
-                    Point2="0,41.1666662357582"
-                    Point3="-4,41.1666662357582" />
-                  <mssgle:LineSegment
-                    End="-138.599993716677,41.1666662357582" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-138.599993716677,41.1666662357582"
-                    Point2="-142.599993716677,41.1666662357582"
-                    Point3="-142.599993716677,45.1666662357582" />
-                  <mssgle:LineSegment
-                    End="-142.599993716677,74.8333324715164" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-121.880758577089,46.1666662357582,101.1615234375,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\DFT_Load_fact_vessel_call\DST_fact_vessel_call"
-          TopLeft="174.16665715062,374.66666425599" />
-        <EdgeLayout
-          Id="Package\DFT_Load_fact_vessel_call.Paths[Row Count Output 1]"
-          TopLeft="253.0333242726,329.333331332472">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.3333328780202,45.3333329235182"
-              Start="0,0"
-              End="10.3333328780202,37.8333329235182">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.6666664617591" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.6666664617591"
-                    Point2="0,22.6666664617591"
-                    Point3="4,22.6666664617591" />
-                  <mssgle:LineSegment
-                    End="6.3333328780202,22.6666664617591" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.3333328780202,22.6666664617591"
-                    Point2="10.3333328780202,22.6666664617591"
-                    Point3="10.3333328780202,26.6666664617591" />
-                  <mssgle:LineSegment
-                    End="10.3333328780202,37.8333329235182" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_fact_vessel_call\SRC_silver_VesselCalls_Resolved">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_fact_vessel_call\DST_fact_vessel_call">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_Load_fact_container_movement">
     <LayoutInfo>
@@ -3646,6 +3448,42 @@ WHERE vc.is_valid = 1;</property>
           Size="284,41.6"
           Id="Package\DFT_Load_fact_container_movement\SRC_silver_ContainerMovements_Resolved"
           TopLeft="304.166650047733,58.0666662628783" />
+        <EdgeLayout
+          Id="Package\DFT_Load_fact_container_movement.Paths[Valid_VesselCall_Rows]"
+          TopLeft="418.033317989277,205.399998860955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142.599993716677,82.333332471517"
+              Start="0,0"
+              End="-142.599993716677,74.833332471517">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.1666662357585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.1666662357585"
+                    Point2="0,41.1666662357585"
+                    Point3="-4,41.1666662357585" />
+                  <mssgle:LineSegment
+                    End="-138.599993716677,41.1666662357585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-138.599993716677,41.1666662357585"
+                    Point2="-142.599993716677,41.1666662357585"
+                    Point3="-142.599993716677,45.1666662357585" />
+                  <mssgle:LineSegment
+                    End="-142.599993716677,74.833332471517" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-144.260758577088,46.1666662357585,145.9215234375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Load_fact_container_movement.Paths[Row Count Output 1]"
           TopLeft="275.4333242726,329.333331332472">
@@ -3714,42 +3552,6 @@ WHERE vc.is_valid = 1;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Load_fact_container_movement.Paths[Valid_VesselCall_Rows]"
-          TopLeft="418.033317989277,205.399998860955">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-142.599993716677,82.333332471517"
-              Start="0,0"
-              End="-142.599993716677,74.833332471517">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.1666662357585" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.1666662357585"
-                    Point2="0,41.1666662357585"
-                    Point3="-4,41.1666662357585" />
-                  <mssgle:LineSegment
-                    End="-138.599993716677,41.1666662357585" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-138.599993716677,41.1666662357585"
-                    Point2="-142.599993716677,41.1666662357585"
-                    Point3="-142.599993716677,45.1666662357585" />
-                  <mssgle:LineSegment
-                    End="-142.599993716677,74.833332471517" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-144.260758577088,46.1666662357585,145.9215234375,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3784,6 +3586,10 @@ WHERE vc.is_valid = 1;</property>
           Id="Package\DFT_Load_fact_gate_transaction\RC_GateTransactionlRows"
           TopLeft="165.8333242726,287.733331332472" />
         <NodeLayout
+          Size="240,41.6"
+          Id="Package\DFT_Load_fact_gate_transaction\SRC_silver_VesselCalls_Resolved"
+          TopLeft="304.166650047733,58.0666662628783" />
+        <NodeLayout
           Size="257.6,41.6"
           Id="Package\DFT_Load_fact_gate_transaction\CSPLIT_Valid_GateTransaction_Facts"
           TopLeft="280.833317989277,163.799998860955" />
@@ -3791,32 +3597,6 @@ WHERE vc.is_valid = 1;</property>
           Size="204,41.6"
           Id="Package\DFT_Load_fact_gate_transaction\DST_fact_GateTransaction"
           TopLeft="174.16665715062,374.66666425599" />
-        <NodeLayout
-          Size="240,41.6"
-          Id="Package\DFT_Load_fact_gate_transaction\SRC_silver_VesselCalls_Resolved"
-          TopLeft="304.166650047733,58.0666662628783" />
-        <EdgeLayout
-          Id="Package\DFT_Load_fact_gate_transaction.Paths[Row Count Output 1]"
-          TopLeft="272.19999071161,329.333331332472">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.333332923518"
-              Start="0,0"
-              End="0,37.833332923518">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.833332923518" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Load_fact_gate_transaction.Paths[OLE DB Source Output]"
           TopLeft="424.166650047733,99.6666662628783">
@@ -3887,9 +3667,39 @@ WHERE vc.is_valid = 1;</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_fact_gate_transaction.Paths[Row Count Output 1]"
+          TopLeft="272.19999071161,329.333331332472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.333332923518"
+              Start="0,0"
+              End="0,37.833332923518">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.833332923518" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_fact_gate_transaction\SRC_silver_VesselCalls_Resolved">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Load_fact_gate_transaction\DST_fact_GateTransaction">
     <Properties>
@@ -3903,11 +3713,152 @@ WHERE vc.is_valid = 1;</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_Load_fact_vessel_call">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="240,41.6"
+          Id="Package\DFT_Load_fact_vessel_call\SRC_silver_VesselCalls_Resolved"
+          TopLeft="304.166650047733,58.0666662628783" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\DFT_Load_fact_vessel_call\DST_fact_vessel_call"
+          TopLeft="174.16665715062,374.66666425599" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\DFT_Load_fact_vessel_call\RC_VesselCallRows"
+          TopLeft="165.8333242726,287.733331332472" />
+        <NodeLayout
+          Size="229.6,41.6"
+          Id="Package\DFT_Load_fact_vessel_call\CSPLIT_Valid_VesselCall_Facts"
+          TopLeft="280.833317989277,163.799998860955" />
+        <EdgeLayout
+          Id="Package\DFT_Load_fact_vessel_call.Paths[Valid_VesselCall_Rows]"
+          TopLeft="395.633317989277,205.399998860955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142.599993716677,82.3333324715164"
+              Start="0,0"
+              End="-142.599993716677,74.8333324715164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.1666662357582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.1666662357582"
+                    Point2="0,41.1666662357582"
+                    Point3="-4,41.1666662357582" />
+                  <mssgle:LineSegment
+                    End="-138.599993716677,41.1666662357582" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-138.599993716677,41.1666662357582"
+                    Point2="-142.599993716677,41.1666662357582"
+                    Point3="-142.599993716677,45.1666662357582" />
+                  <mssgle:LineSegment
+                    End="-142.599993716677,74.8333324715164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-121.880758577089,46.1666662357582,101.1615234375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_fact_vessel_call.Paths[Row Count Output 1]"
+          TopLeft="253.0333242726,329.333331332472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.3333328780202,45.3333329235182"
+              Start="0,0"
+              End="10.3333328780202,37.8333329235182">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6666664617591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6666664617591"
+                    Point2="0,22.6666664617591"
+                    Point3="4,22.6666664617591" />
+                  <mssgle:LineSegment
+                    End="6.3333328780202,22.6666664617591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.3333328780202,22.6666664617591"
+                    Point2="10.3333328780202,22.6666664617591"
+                    Point3="10.3333328780202,26.6666664617591" />
+                  <mssgle:LineSegment
+                    End="10.3333328780202,37.8333329235182" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_fact_vessel_call.Paths[OLE DB Source Output]"
+          TopLeft="424.166650047733,99.6666662628783">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28.5333320584562,64.1333325980769"
+              Start="0,0"
+              End="-28.5333320584562,56.6333325980769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.0666662990385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.0666662990385"
+                    Point2="0,32.0666662990385"
+                    Point3="-4,32.0666662990385" />
+                  <mssgle:LineSegment
+                    End="-24.5333320584562,32.0666662990385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.5333320584562,32.0666662990385"
+                    Point2="-28.5333320584562,32.0666662990385"
+                    Point3="-28.5333320584562,36.0666662990385" />
+                  <mssgle:LineSegment
+                    End="-28.5333320584562,56.6333325980769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_fact_gate_transaction\SRC_silver_VesselCalls_Resolved">
+    design-time-name="Package\DFT_Load_fact_vessel_call\SRC_silver_VesselCalls_Resolved">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_fact_vessel_call\DST_fact_vessel_call">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

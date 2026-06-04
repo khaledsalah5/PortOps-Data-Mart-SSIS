@@ -602,12 +602,17 @@ BEGIN
             TRY_CAST(is_reefer AS BIT) AS is_reefer,
             TRY_CAST(weight_tons AS DECIMAL(10,2)) AS weight_tons,
 
-            CASE
-                WHEN TRY_CAST(move_start_time AS DATETIME2) IS NOT NULL
-                 AND TRY_CAST(move_end_time AS DATETIME2) IS NOT NULL
-                THEN DATEDIFF(SECOND, TRY_CAST(move_start_time AS DATETIME2), TRY_CAST(move_end_time AS DATETIME2))
-                ELSE NULL
-            END AS crane_cycle_seconds,
+			CASE
+				WHEN TRY_CAST(move_start_time AS DATETIME2) IS NOT NULL
+				 AND TRY_CAST(move_end_time AS DATETIME2) IS NOT NULL
+				 AND TRY_CAST(move_end_time AS DATETIME2) >= TRY_CAST(move_start_time AS DATETIME2)
+				THEN DATEDIFF(
+					SECOND,
+					TRY_CAST(move_start_time AS DATETIME2),
+					TRY_CAST(move_end_time AS DATETIME2)
+				)
+				ELSE NULL
+			END AS crane_cycle_seconds,
 
             CASE
                 WHEN TRY_CAST(movement_id AS INT) IS NULL THEN 0

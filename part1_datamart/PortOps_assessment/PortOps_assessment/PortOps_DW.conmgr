@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=KHALED\SQLSERVERDEV;Initial Catalog=PortOps_DW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-PortOps_assessment-{CA777945-62A9-4145-9F78-0B8DEAD96D45}KHALED\SQLSERVERDEV.PortOps_DW;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=YOUR_SQL_SERVER;Initial Catalog=PortOps_DW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-PortOps_assessment-{CA777945-62A9-4145-9F78-0B8DEAD96D45}YOUR_SQL_SERVER.PortOps_DW;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -1,0 +1,16 @@
+# Visual Studio / SSDT
+.vs/
+*.suo
+*.user
+*.dtproj.user
+
+# SSIS build output
+**/bin/
+**/obj/
+*.ispac
+
+# Local / temporary files
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
